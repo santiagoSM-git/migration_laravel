@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Training_Center extends Model
 {
     use HasFactory;
+    public function teachers()
+    {
+        return $this->hasMany(Teacher::class);
+    }
 }
